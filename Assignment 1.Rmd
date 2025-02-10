@@ -1,0 +1,35 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+cd /work/agro932/niranjan27/Genetics #Changing the directory
+pwd: #to know the current working directory
+cat extracted_genotypes.fastq #to open the file 
+fastq-dump --split-3 SRR8906778.sralite.1 # to unzip the SRR file
+module load SRAtoolkit/2.11 #To load SRA toolkit module
+wget #paste link here for data #To download the sequence data
+
+```
+
+## Downloading the teosente data
+#### To download the teosente data, the accession number "PRJNA641489" was used to search for the data. It showed the 184 data link in that page. Using the code "wget" for each individual data link, the data for teosinte for 10 genotypes was downloaded in HCC. The example codes for 3 genotypes is shown in code chunk below. 
+
+```{r}
+wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-zq-18/SRR012/12460/SRR12460347/SRR12460347.lite.1
+
+wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-zq-18/SRR012/12460/SRR12460349/SRR12460349.lite.1
+
+wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-zq-18/SRR012/12460/SRR12460350/SRR12460350.lite.1
+```
+ 
+
+### Extracting the fastq file
+### After downoading the data the data was unzipped using "SRAtoolkit/2.11" The code for this is in the chunk below.
+
+```{r}
+module load SRAtoolkit/2.11 #to load SRA toolkit module
+fastq-dump --split-3 SRR8906778.sralite.1 # to unzip the SRR file
+```
