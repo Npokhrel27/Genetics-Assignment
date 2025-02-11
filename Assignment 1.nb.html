@@ -11,7 +11,7 @@
 
 
 
-<title>R Notebook</title>
+<title>Assignment 1 (AGRO 932-Selection Scan Project)</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1746,35 +1746,45 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">R Notebook</h1>
+<h1 class="title toc-ignore">Assignment 1 (AGRO 932-Selection Scan
+Project)</h1>
 
 </div>
 
 
 <!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG48IS0tIHJuYi1zb3VyY2UtYmVnaW4gZXlKa1lYUmhJam9pWUdCZ2NseHVZMlFnTDNkdmNtc3ZZV2R5Ynprek1pOXVhWEpoYm1waGJqSTNMMGRsYm1WMGFXTnpJQ05EYUdGdVoybHVaeUIwYUdVZ1pHbHlaV04wYjNKNVhHNXdkMlE2SUNOMGJ5QnJibTkzSUhSb1pTQmpkWEp5Wlc1MElIZHZjbXRwYm1jZ1pHbHlaV04wYjNKNVhHNWpZWFFnWlhoMGNtRmpkR1ZrWDJkbGJtOTBlWEJsY3k1bVlYTjBjU0FqZEc4Z2IzQmxiaUIwYUdVZ1ptbHNaU0JjYm1aaGMzUnhMV1IxYlhBZ0xTMXpjR3hwZEMweklGTlNVamc1TURZM056Z3VjM0poYkdsMFpTNHhJQ01nZEc4Z2RXNTZhWEFnZEdobElGTlNVaUJtYVd4bFhHNXRiMlIxYkdVZ2JHOWhaQ0JUVWtGMGIyOXNhMmwwTHpJdU1URWdJMVJ2SUd4dllXUWdVMUpCSUhSdmIyeHJhWFFnYlc5a2RXeGxYRzUzWjJWMElDTndZWE4wWlNCc2FXNXJJR2hsY21VZ1ptOXlJR1JoZEdFZ0kxUnZJR1J2ZDI1c2IyRmtJSFJvWlNCelpYRjFaVzVqWlNCa1lYUmhYRzVjYm1CZ1lDSjkgLS0+XG5cbmBgYHJcbmNkIC93b3JrL2Fncm85MzIvbmlyYW5qYW4yNy9HZW5ldGljcyAjQ2hhbmdpbmcgdGhlIGRpcmVjdG9yeVxucHdkOiAjdG8ga25vdyB0aGUgY3VycmVudCB3b3JraW5nIGRpcmVjdG9yeVxuY2F0IGV4dHJhY3RlZF9nZW5vdHlwZXMuZmFzdHEgI3RvIG9wZW4gdGhlIGZpbGUgXG5mYXN0cS1kdW1wIC0tc3BsaXQtMyBTUlI4OTA2Nzc4LnNyYWxpdGUuMSAjIHRvIHVuemlwIHRoZSBTUlIgZmlsZVxubW9kdWxlIGxvYWQgU1JBdG9vbGtpdC8yLjExICNUbyBsb2FkIFNSQSB0b29sa2l0IG1vZHVsZVxud2dldCAjcGFzdGUgbGluayBoZXJlIGZvciBkYXRhICNUbyBkb3dubG9hZCB0aGUgc2VxdWVuY2UgZGF0YVxuXG5gYGBcblxuPCEtLSBybmItc291cmNlLWVuZCAtLT5cbiJ9 -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2QgL3dvcmsvYWdybzkzMi9uaXJhbmphbjI3L0dlbmV0aWNzICNDaGFuZ2luZyB0aGUgZGlyZWN0b3J5XG5wd2Q6ICN0byBrbm93IHRoZSBjdXJyZW50IHdvcmtpbmcgZGlyZWN0b3J5XG5jYXQgZXh0cmFjdGVkX2dlbm90eXBlcy5mYXN0cSAjdG8gb3BlbiB0aGUgZmlsZSBcbmZhc3RxLWR1bXAgLS1zcGxpdC0zIFNSUjg5MDY3Nzguc3JhbGl0ZS4xICMgdG8gdW56aXAgdGhlIFNSUiBmaWxlXG5tb2R1bGUgbG9hZCBTUkF0b29sa2l0LzIuMTEgI1RvIGxvYWQgU1JBIHRvb2xraXQgbW9kdWxlXG53Z2V0ICNwYXN0ZSBsaW5rIGhlcmUgZm9yIGRhdGEgI1RvIGRvd25sb2FkIHRoZSBzZXF1ZW5jZSBkYXRhXG5cbmBgYCJ9 -->
-<pre class="r"><code>cd /work/agro932/niranjan27/Genetics #Changing the directory
-pwd: #to know the current working directory
-cat extracted_genotypes.fastq #to open the file 
-fastq-dump --split-3 SRR8906778.sralite.1 # to unzip the SRR file
-module load SRAtoolkit/2.11 #To load SRA toolkit module
-wget #paste link here for data #To download the sequence data
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<div id="downloading-the-teosente-data" class="section level2">
-<h2>Downloading the teosente data</h2>
-<div id="to-download-the-teosente-data-the-accession-number-prjna641489-was-used-to-search-for-the-data.-it-showed-the-184-data-link-in-that-page.-using-the-code-wget-for-each-individual-data-link-the-data-for-teosinte-for-10-genotypes-was-downloaded-in-hcc.-the-example-codes-for-3-genotypes-is-shown-in-code-chunk-below." class="section level4">
-<h4>To download the teosente data, the accession number “PRJNA641489”
-was used to search for the data. It showed the 184 data link in that
-page. Using the code “wget” for each individual data link, the data for
-teosinte for 10 genotypes was downloaded in HCC. The example codes for 3
-genotypes is shown in code chunk below.</h4>
+<p><br><br></p>
+<div id="for-this-study-the-article-titled-genome-sequencing-reveals-evidence-of-adaptive-variation-in-the-genus-zea.-by-chen-et.al.-20222-was-selected.-in-this-study-237-teosinte-accessions-were-collected-from-cimmyt-usda-and-other-collaborators.-young-leaves-from-each-accessions-were-used-to-extract-dna-and-sequencing-was-done-using-illumina-hiseq-platform-and-nocaseq-6000-platform.-the-data-is-available-in-the-ncbi-sequence-read-archive-with-the-accession-numbers-prjna641489-prjna816255-prjna816273-and-prjna645739.-similarly-this-study-used-already-available-dna-sequencing-data-of-maize-by-downloading-from-ncbi-sequence-read-archive-database-on-accession-number-prjna531553." class="section level5">
+<h5>For this study the article titled “Genome sequencing reveals
+evidence of adaptive variation in the genus Zea.” by Chen et.al. (20222)
+was selected. In this study, 237 teosinte accessions were collected from
+CIMMYT, USDA and other collaborators. Young leaves from each accessions
+were used to extract DNA and sequencing was done using Illumina HiSeq
+platform and NocaSeq 6000 platform. The data is available in the NCBI
+Sequence Read Archive with the accession numbers PRJNA641489,
+PRJNA816255, PRJNA816273 and PRJNA645739. Similarly, this study used
+already available DNA sequencing data of maize by downloading from NCBI
+Sequence Read Archive database on accession number “PRJNA531553”.</h5>
+</div>
+<div id="for-our-assignment-we-only-download-10-accessions-of-each-teosinte-and-maize.-the-accession-number-prjna641489-and-prjna531553-was-used-to-search-for-the-teosinte-and-maize-data-respectively.-using-the-code-wget-for-each-individual-data-link-the-data-for-teosinte-for-10-genotypes-was-downloaded-in-hcc.-the-example-codes-for-downloading-3-genotypes-data-is-shown-in-code-chunk-below." class="section level5">
+<h5>For our assignment we only download 10 accessions of each teosinte
+and maize. The accession number “PRJNA641489” and “PRJNA531553” was used
+to search for the teosinte and maize data respectively. Using the code
+“wget” for each individual data link, the data for teosinte for 10
+genotypes was downloaded in HCC. The example codes for downloading 3
+genotypes data is shown in code chunk below.</h5>
+</div>
+<div id="the-data-of-teosinte-is-sotred-in-hcc-in-path-workagro932niranjan27teosinte_data" class="section level5">
+<h5>The data of teosinte is sotred in HCC in path:
+“/work/agro932/niranjan27/teosinte_data”</h5>
+</div>
+<div id="the-data-of-maize-is-sotred-in-hcc-in-path-workagro932niranjan27maize_data" class="section level5">
+<h5>The data of maize is sotred in HCC in path:
+“/work/agro932/niranjan27/maize_data”</h5>
+</div>
+<div id="similarly-the-reference-genome-of-maize-is-stored-in-hcc-with-title-maize_reference_genome-and-path-is-workagro932niranjan27" class="section level4">
+<h4>Similarly, the reference genome of maize is stored in HCC with title
+“Maize_reference_genome” and path is :/work/agro932/niranjan27</h4>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-output-begin eyJkYXRhIjoiXG48IS0tIHJuYi1zb3VyY2UtYmVnaW4gZXlKa1lYUmhJam9pWUdCZ2NseHVkMmRsZENCb2RIUndjem92TDNOeVlTMWtiM2R1Ykc5aFpHSXVZbVV0YldRdWJtTmlhUzV1YkcwdWJtbG9MbWR2ZGk5emIzTXlMM055WVMxd2RXSXRlbkV0TVRndlUxSlNNREV5THpFeU5EWXdMMU5TVWpFeU5EWXdNelEzTDFOU1VqRXlORFl3TXpRM0xteHBkR1V1TVZ4dVhHNTNaMlYwSUdoMGRIQnpPaTh2YzNKaExXUnZkMjVzYjJGa1lpNWlaUzF0WkM1dVkySnBMbTVzYlM1dWFXZ3VaMjkyTDNOdmN6SXZjM0poTFhCMVlpMTZjUzB4T0M5VFVsSXdNVEl2TVRJME5qQXZVMUpTTVRJME5qQXpORGt2VTFKU01USTBOakF6TkRrdWJHbDBaUzR4WEc1Y2JuZG5aWFFnYUhSMGNITTZMeTl6Y21FdFpHOTNibXh2WVdSaUxtSmxMVzFrTG01allta3VibXh0TG01cGFDNW5iM1l2YzI5ek1pOXpjbUV0Y0hWaUxYcHhMVEU0TDFOU1VqQXhNaTh4TWpRMk1DOVRVbEl4TWpRMk1ETTFNQzlUVWxJeE1qUTJNRE0xTUM1c2FYUmxMakZjYm1CZ1lDSjkgLS0+XG5cbmBgYHJcbndnZXQgaHR0cHM6Ly9zcmEtZG93bmxvYWRiLmJlLW1kLm5jYmkubmxtLm5paC5nb3Yvc29zMi9zcmEtcHViLXpxLTE4L1NSUjAxMi8xMjQ2MC9TUlIxMjQ2MDM0Ny9TUlIxMjQ2MDM0Ny5saXRlLjFcblxud2dldCBodHRwczovL3NyYS1kb3dubG9hZGIuYmUtbWQubmNiaS5ubG0ubmloLmdvdi9zb3MyL3NyYS1wdWItenEtMTgvU1JSMDEyLzEyNDYwL1NSUjEyNDYwMzQ5L1NSUjEyNDYwMzQ5LmxpdGUuMVxuXG53Z2V0IGh0dHBzOi8vc3JhLWRvd25sb2FkYi5iZS1tZC5uY2JpLm5sbS5uaWguZ292L3NvczIvc3JhLXB1Yi16cS0xOC9TUlIwMTIvMTI0NjAvU1JSMTI0NjAzNTAvU1JSMTI0NjAzNTAubGl0ZS4xXG5gYGBcblxuPCEtLSBybmItc291cmNlLWVuZCAtLT5cbiJ9 -->
@@ -1788,13 +1798,9 @@ wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-zq-18/SRR012/1246
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-</div>
-<div id="extracting-the-fastq-file" class="section level3">
-<h3>Extracting the fastq file</h3>
-</div>
-<div id="after-downoading-the-data-the-data-was-unzipped-using-sratoolkit2.11-the-code-for-this-is-in-the-chunk-below." class="section level3">
-<h3>After downoading the data the data was unzipped using
-“SRAtoolkit/2.11” The code for this is in the chunk below.</h3>
+<div id="the-dna-sequencing-data-can-be-unzipped-using-sratoolkit2.11-and-using-codes-shown-in-chunks-below." class="section level5">
+<h5>The DNA sequencing data can be unzipped using “SRAtoolkit/2.11” and
+using codes shown in chunks below.</h5>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-output-begin eyJkYXRhIjoiXG48IS0tIHJuYi1zb3VyY2UtYmVnaW4gZXlKa1lYUmhJam9pWUdCZ2NseHViVzlrZFd4bElHeHZZV1FnVTFKQmRHOXZiR3RwZEM4eUxqRXhJQ04wYnlCc2IyRmtJRk5TUVNCMGIyOXNhMmwwSUcxdlpIVnNaVnh1Wm1GemRIRXRaSFZ0Y0NBdExYTndiR2wwTFRNZ1UxSlNPRGt3TmpjM09DNXpjbUZzYVhSbExqRWdJeUIwYnlCMWJucHBjQ0IwYUdVZ1UxSlNJR1pwYkdWY2JtQmdZQ0o5IC0tPlxuXG5gYGByXG5tb2R1bGUgbG9hZCBTUkF0b29sa2l0LzIuMTEgI3RvIGxvYWQgU1JBIHRvb2xraXQgbW9kdWxlXG5mYXN0cS1kdW1wIC0tc3BsaXQtMyBTUlI4OTA2Nzc4LnNyYWxpdGUuMSAjIHRvIHVuemlwIHRoZSBTUlIgZmlsZVxuYGBgXG5cbjwhLS0gcm5iLXNvdXJjZS1lbmQgLS0+XG4ifQ== -->
@@ -1804,10 +1810,12 @@ fastq-dump --split-3 SRR8906778.sralite.1 # to unzip the SRR file</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKCmBgYHtyfQpjZCAvd29yay9hZ3JvOTMyL25pcmFuamFuMjcvR2VuZXRpY3MgI0NoYW5naW5nIHRoZSBkaXJlY3RvcnkKcHdkOiAjdG8ga25vdyB0aGUgY3VycmVudCB3b3JraW5nIGRpcmVjdG9yeQpjYXQgZXh0cmFjdGVkX2dlbm90eXBlcy5mYXN0cSAjdG8gb3BlbiB0aGUgZmlsZSAKZmFzdHEtZHVtcCAtLXNwbGl0LTMgU1JSODkwNjc3OC5zcmFsaXRlLjEgIyB0byB1bnppcCB0aGUgU1JSIGZpbGUKbW9kdWxlIGxvYWQgU1JBdG9vbGtpdC8yLjExICNUbyBsb2FkIFNSQSB0b29sa2l0IG1vZHVsZQp3Z2V0ICNwYXN0ZSBsaW5rIGhlcmUgZm9yIGRhdGEgI1RvIGRvd25sb2FkIHRoZSBzZXF1ZW5jZSBkYXRhCgpgYGAKCiMjIERvd25sb2FkaW5nIHRoZSB0ZW9zZW50ZSBkYXRhCiMjIyMgVG8gZG93bmxvYWQgdGhlIHRlb3NlbnRlIGRhdGEsIHRoZSBhY2Nlc3Npb24gbnVtYmVyICJQUkpOQTY0MTQ4OSIgd2FzIHVzZWQgdG8gc2VhcmNoIGZvciB0aGUgZGF0YS4gSXQgc2hvd2VkIHRoZSAxODQgZGF0YSBsaW5rIGluIHRoYXQgcGFnZS4gVXNpbmcgdGhlIGNvZGUgIndnZXQiIGZvciBlYWNoIGluZGl2aWR1YWwgZGF0YSBsaW5rLCB0aGUgZGF0YSBmb3IgdGVvc2ludGUgZm9yIDEwIGdlbm90eXBlcyB3YXMgZG93bmxvYWRlZCBpbiBIQ0MuIFRoZSBleGFtcGxlIGNvZGVzIGZvciAzIGdlbm90eXBlcyBpcyBzaG93biBpbiBjb2RlIGNodW5rIGJlbG93LiAKCmBgYHtyfQp3Z2V0IGh0dHBzOi8vc3JhLWRvd25sb2FkYi5iZS1tZC5uY2JpLm5sbS5uaWguZ292L3NvczIvc3JhLXB1Yi16cS0xOC9TUlIwMTIvMTI0NjAvU1JSMTI0NjAzNDcvU1JSMTI0NjAzNDcubGl0ZS4xCgp3Z2V0IGh0dHBzOi8vc3JhLWRvd25sb2FkYi5iZS1tZC5uY2JpLm5sbS5uaWguZ292L3NvczIvc3JhLXB1Yi16cS0xOC9TUlIwMTIvMTI0NjAvU1JSMTI0NjAzNDkvU1JSMTI0NjAzNDkubGl0ZS4xCgp3Z2V0IGh0dHBzOi8vc3JhLWRvd25sb2FkYi5iZS1tZC5uY2JpLm5sbS5uaWguZ292L3NvczIvc3JhLXB1Yi16cS0xOC9TUlIwMTIvMTI0NjAvU1JSMTI0NjAzNTAvU1JSMTI0NjAzNTAubGl0ZS4xCmBgYAogCgojIyMgRXh0cmFjdGluZyB0aGUgZmFzdHEgZmlsZQojIyMgQWZ0ZXIgZG93bm9hZGluZyB0aGUgZGF0YSB0aGUgZGF0YSB3YXMgdW56aXBwZWQgdXNpbmcgIlNSQXRvb2xraXQvMi4xMSIgVGhlIGNvZGUgZm9yIHRoaXMgaXMgaW4gdGhlIGNodW5rIGJlbG93LgoKYGBge3J9Cm1vZHVsZSBsb2FkIFNSQXRvb2xraXQvMi4xMSAjdG8gbG9hZCBTUkEgdG9vbGtpdCBtb2R1bGUKZmFzdHEtZHVtcCAtLXNwbGl0LTMgU1JSODkwNjc3OC5zcmFsaXRlLjEgIyB0byB1bnppcCB0aGUgU1JSIGZpbGUKYGBg</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiQXNzaWdubWVudCAxIChBR1JPIDkzMi1TZWxlY3Rpb24gU2NhbiBQcm9qZWN0KSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQo8YnI+PGJyPgoKIyMjIyMgRm9yIHRoaXMgc3R1ZHkgdGhlIGFydGljbGUgdGl0bGVkICJHZW5vbWUgc2VxdWVuY2luZyByZXZlYWxzIGV2aWRlbmNlIG9mIGFkYXB0aXZlIHZhcmlhdGlvbiBpbiB0aGUgZ2VudXMgWmVhLiIgYnkgQ2hlbiBldC5hbC4gKDIwMjIyKSB3YXMgc2VsZWN0ZWQuIEluIHRoaXMgc3R1ZHksIDIzNyB0ZW9zaW50ZSBhY2Nlc3Npb25zIHdlcmUgY29sbGVjdGVkIGZyb20gQ0lNTVlULCBVU0RBIGFuZCBvdGhlciBjb2xsYWJvcmF0b3JzLiBZb3VuZyBsZWF2ZXMgZnJvbSBlYWNoIGFjY2Vzc2lvbnMgd2VyZSB1c2VkIHRvIGV4dHJhY3QgRE5BIGFuZCBzZXF1ZW5jaW5nIHdhcyBkb25lIHVzaW5nIElsbHVtaW5hIEhpU2VxIHBsYXRmb3JtIGFuZCBOb2NhU2VxIDYwMDAgcGxhdGZvcm0uIFRoZSBkYXRhIGlzIGF2YWlsYWJsZSBpbiB0aGUgTkNCSSBTZXF1ZW5jZSBSZWFkIEFyY2hpdmUgd2l0aCB0aGUgYWNjZXNzaW9uIG51bWJlcnMgUFJKTkE2NDE0ODksIFBSSk5BODE2MjU1LCBQUkpOQTgxNjI3MyBhbmQgUFJKTkE2NDU3MzkuIFNpbWlsYXJseSwgdGhpcyBzdHVkeSB1c2VkIGFscmVhZHkgYXZhaWxhYmxlIEROQSBzZXF1ZW5jaW5nIGRhdGEgb2YgbWFpemUgYnkgZG93bmxvYWRpbmcgZnJvbSBOQ0JJIFNlcXVlbmNlIFJlYWQgQXJjaGl2ZSBkYXRhYmFzZSBvbiBhY2Nlc3Npb24gbnVtYmVyICJQUkpOQTUzMTU1MyIuCgojIyMjIyBGb3Igb3VyIGFzc2lnbm1lbnQgd2Ugb25seSBkb3dubG9hZCAxMCBhY2Nlc3Npb25zIG9mIGVhY2ggdGVvc2ludGUgYW5kIG1haXplLiBUaGUgYWNjZXNzaW9uIG51bWJlciAiUFJKTkE2NDE0ODkiIGFuZCAiUFJKTkE1MzE1NTMiIHdhcyB1c2VkIHRvIHNlYXJjaCBmb3IgdGhlIHRlb3NpbnRlIGFuZCBtYWl6ZSBkYXRhIHJlc3BlY3RpdmVseS4gVXNpbmcgdGhlIGNvZGUgIndnZXQiIGZvciBlYWNoIGluZGl2aWR1YWwgZGF0YSBsaW5rLCB0aGUgZGF0YSBmb3IgdGVvc2ludGUgZm9yIDEwIGdlbm90eXBlcyB3YXMgZG93bmxvYWRlZCBpbiBIQ0MuIFRoZSBleGFtcGxlIGNvZGVzIGZvciBkb3dubG9hZGluZyAzIGdlbm90eXBlcyBkYXRhIGlzIHNob3duIGluIGNvZGUgY2h1bmsgYmVsb3cuCiMjIyMjIFRoZSBkYXRhIG9mIHRlb3NpbnRlIGlzIHNvdHJlZCBpbiBIQ0MgaW4gcGF0aDogIi93b3JrL2Fncm85MzIvbmlyYW5qYW4yNy90ZW9zaW50ZV9kYXRhIgojIyMjIyBUaGUgZGF0YSBvZiBtYWl6ZSBpcyBzb3RyZWQgaW4gSENDIGluIHBhdGg6ICIvd29yay9hZ3JvOTMyL25pcmFuamFuMjcvbWFpemVfZGF0YSIKIyMjIyBTaW1pbGFybHksIHRoZSByZWZlcmVuY2UgZ2Vub21lIG9mIG1haXplIGlzIHN0b3JlZCBpbiBIQ0Mgd2l0aCB0aXRsZSAiTWFpemVfcmVmZXJlbmNlX2dlbm9tZSIgYW5kIHBhdGggaXMgOi93b3JrL2Fncm85MzIvbmlyYW5qYW4yNwoKYGBge3J9CndnZXQgaHR0cHM6Ly9zcmEtZG93bmxvYWRiLmJlLW1kLm5jYmkubmxtLm5paC5nb3Yvc29zMi9zcmEtcHViLXpxLTE4L1NSUjAxMi8xMjQ2MC9TUlIxMjQ2MDM0Ny9TUlIxMjQ2MDM0Ny5saXRlLjEKCndnZXQgaHR0cHM6Ly9zcmEtZG93bmxvYWRiLmJlLW1kLm5jYmkubmxtLm5paC5nb3Yvc29zMi9zcmEtcHViLXpxLTE4L1NSUjAxMi8xMjQ2MC9TUlIxMjQ2MDM0OS9TUlIxMjQ2MDM0OS5saXRlLjEKCndnZXQgaHR0cHM6Ly9zcmEtZG93bmxvYWRiLmJlLW1kLm5jYmkubmxtLm5paC5nb3Yvc29zMi9zcmEtcHViLXpxLTE4L1NSUjAxMi8xMjQ2MC9TUlIxMjQ2MDM1MC9TUlIxMjQ2MDM1MC5saXRlLjEKYGBgCiAKIyMjIyMgVGhlIEROQSBzZXF1ZW5jaW5nIGRhdGEgY2FuIGJlIHVuemlwcGVkIHVzaW5nICJTUkF0b29sa2l0LzIuMTEiIGFuZCB1c2luZyBjb2RlcyBzaG93biBpbiBjaHVua3MgYmVsb3cuCgpgYGB7cn0KbW9kdWxlIGxvYWQgU1JBdG9vbGtpdC8yLjExICN0byBsb2FkIFNSQSB0b29sa2l0IG1vZHVsZQpmYXN0cS1kdW1wIC0tc3BsaXQtMyBTUlI4OTA2Nzc4LnNyYWxpdGUuMSAjIHRvIHVuemlwIHRoZSBTUlIgZmlsZQpgYGAKCgoKCgoK</div>
 
 
 
