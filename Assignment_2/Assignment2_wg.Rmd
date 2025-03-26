@@ -1,10 +1,22 @@
 ---
-title: "Assignment2_wg"
+title: "Assignment 2 Fst calculation of between maize and mexicana"
 author: "Niranjan Pokhrel"
 date: "2025-03-24"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
+# Information about article and data 
+
+#### Since the data collected in Assignment_1 for the study was around 1 TB, it was very large file to do analysis. So, for this study another article titled "Selective dorting of ancestral introgression in maize and teosinte along an elevational cline." by Calfee et.al., 2021 was selected. This study used 14 maize and 14 mexicana accessions. The data used in this study is stored in NCBI Short Read Archive with accession number "PRJNA657016".
+
+#### For this assignment purposed, only 10 accessions of each maize and mexicana were used. Whole genome sequence dataset were downloaded and extracted. The codes to download and unzip the data is shared in Assignment_1.
+
+## The detailed steps to calculate Fst value for two population is explained below:
+
+
+### Step 1: The "bwa" and "samtools" was used to align raw sequence file to the referene genome and process, process manage and filter alignment files respectively. The detailed code is in the chunk below: 
 
 ```{bash, eval=FALSE}
 
@@ -76,11 +88,10 @@ samtools index "$SORTED_BAM"
 
 # Step 4: Clean up intermediate BAM
 rm "$OUT_BAM"
-
-
-
-
 ```
+
+### Step 2: The step 1 created the BAM files which is aligned sequences files. The aligned sequence files are then used for snp calling using "bcftools". The detailed steps is in chunk below: 
+
 
 
 ```{bash, eval=FALSE}
@@ -130,6 +141,8 @@ bcftools index "${OUTDIR}/${SAMPLE}.bcf"
 
 ```
 
+### Step 3: ALl snp called bcf files of 10 maize and 10 mexicanan were then merged and then converted to tabular format for analysis in R.
+
 ```{bash, eval=FALSE}
 #Merge all bcf file 
 
@@ -149,6 +162,8 @@ bcftools index merged_biallelic_snps.bcf
 bcftools query -f '%CHROM\t%POS\t%REF\t%ALT\t%QUAL\t%DP[\t%GT]\n' merged_biallelic_snps.bcf > snp_calls.txt
 
 ```
+
+### Step 3: Since the final text file of "snp_calls.txt" was large file R could not load and extract alleles and allele frequency, so the snp data was seperated to small sized chunks for easy analysis. The code below seperates snp data to small chunks and extract Fst value for all and create Manhatten plot for each chunk. 
 
 ```{r, eval=FALSE}
 
@@ -199,6 +214,41 @@ dev.off()
 
 ```
 
+
+### Step 4: Combining the allele frequency data and plotting a single manhatten plot
+
+```{r, eval=FALSE}
+# Combine all the csv file and plot the data
+
+# Load package
+library(data.table)
+
+# === Define your folder ===
+fst_dir <- "/work/agro932/niranjan27/fst_output/"
+
+# === List all Fst CSV files ===
+fst_files <- list.files(path = fst_dir, pattern = "snp_chunk_.*_fst\\.csv$", full.names = TRUE)
+
+# === Combine all files into one data.table ===
+fst_all <- rbindlist(lapply(fst_files, fread))
+
+# === Optional: Sort by chromosome and position ===
+fst_all <- fst_all[order(chr, pos)]
+
+# === Save combined Fst CSV ===
+fwrite(fst_all, file = file.path(fst_dir, "fst_all_combined.csv"))
+
+# === Plot combined Fst ===
+png(file.path(fst_dir, "fst_combined_plot.png"), width = 1600, height = 600)
+plot(fst_all$pos, fst_all$fst, pch = 20, col = "darkblue",
+     xlab = "Genomic Position", ylab = "Fst",
+     main = "Genome-wide Fst Values")
+dev.off()
+
+```
+
+### The code below is to run above step 4 code in slurm 
+
 ```{bash, eval=FALSE}
 #!/bin/bash
 #SBATCH -D /work/agro932/niranjan27/
@@ -232,35 +282,6 @@ Rscript /work/agro932/niranjan27/scripts/calculate_fst_chunk.R "$INPUT_FILE" "$C
 
 ```
 
-```{r, eval=FALSE}
-# Combine all the csv file and plot the data
-
-# Load package
-library(data.table)
-
-# === Define your folder ===
-fst_dir <- "/work/agro932/niranjan27/fst_output/"
-
-# === List all Fst CSV files ===
-fst_files <- list.files(path = fst_dir, pattern = "snp_chunk_.*_fst\\.csv$", full.names = TRUE)
-
-# === Combine all files into one data.table ===
-fst_all <- rbindlist(lapply(fst_files, fread))
-
-# === Optional: Sort by chromosome and position ===
-fst_all <- fst_all[order(chr, pos)]
-
-# === Save combined Fst CSV ===
-fwrite(fst_all, file = file.path(fst_dir, "fst_all_combined.csv"))
-
-# === Plot combined Fst ===
-png(file.path(fst_dir, "fst_combined_plot.png"), width = 1600, height = 600)
-plot(fst_all$pos, fst_all$fst, pch = 20, col = "darkblue",
-     xlab = "Genomic Position", ylab = "Fst",
-     main = "Genome-wide Fst Values")
-dev.off()
-
-```
 
 
 
