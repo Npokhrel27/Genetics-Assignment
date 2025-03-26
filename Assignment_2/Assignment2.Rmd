@@ -3,8 +3,8 @@ title: "Assignment 2 Fst calculation of between maize and mexicana"
 author: "Niranjan Pokhrel"
 date: "2025-03-24"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Information about article and data 
@@ -12,6 +12,14 @@ output:
 #### Since the data collected in Assignment_1 for the study was around 1 TB, it was very large file to do analysis. So, for this study another article titled "Selective dorting of ancestral introgression in maize and teosinte along an elevational cline." by Calfee et.al., 2021 was selected. This study used 14 maize and 14 mexicana accessions. The data used in this study is stored in NCBI Short Read Archive with accession number "PRJNA657016".
 
 #### For this assignment purposed, only 10 accessions of each maize and mexicana were used. Whole genome sequence dataset were downloaded and extracted. The codes to download and unzip the data is shared in Assignment_1.
+
+
+## Path of data used in analysis:
+### Maize data: /work/agro932/niranjan27/maize
+### Mexicana data: /work/agro932/niranjan27/mexicana
+### Reference genome: /work/agro932/niranjan27/Whole_reference_genome
+
+
 
 ## The detailed steps to calculate Fst value for two population is explained below:
 
