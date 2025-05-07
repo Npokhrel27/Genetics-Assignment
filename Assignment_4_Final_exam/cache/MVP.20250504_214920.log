@@ -1,0 +1,50 @@
+======================== Welcome to MVP =========================
+    an R package for Memory-efficient, Visualization-enhanced    
+     and Parallel-accelerated genome-wide association study      
+                      __  __  __   __  ___                       
+                     |  \/  | \ \ / / | _ \                      
+                     | |\/| |  \ V /  |  _/                      
+                     |_|  |_|   \_/   |_|        Version: 1.4.0  
+  Design & Maintain: Lilin Yin, Haohao Zhang, and Xiaolei Liu    
+  Contributors: Zhenshuang Tang, Jingya Xu, Dong Yin, Zhiwu      
+  Zhang, Xiaohui Yuan, Mengjin Zhu, Shuhong Zhao, Xinyun Li      
+  Mailto: xiaoleiliu@mail.hzau.edu.cn, ylilin@mail.hzau.edu.cn   
+=================================================================
+Start: 2025-05-04 21:49:20 CDT 
+The log has been output to the file: /home/schnablelab/niranjan27/Genetics-Assignment/Final_term/Plots/MVP.20250504_214920.log 
+Input data has 181 individuals and 62077 markers 
+Markers are detected to be stored by column 
+Analyzed trait: SLK_HN 
+Number of threads used: 56 
+OpenBLAS Library is detected, nice job!
+Calculate allele frequency... 
+Computing GRM for 181 individuals using 62077 markers with a step of 10000 
+Deriving relationship matrix successfully 
+Eigen Decomposition on GRM 
+Deriving PCs successfully 
+Number of PCs included in FarmCPU: 3 
+-------------------------GWAS Start------------------------- 
+FarmCPU Start... 
+Current loop: 1 out of maximum of 10 
+seqQTN: 
+NULL 
+number of covariates in current loop is: 
+3 
+scanning... 
+Current loop: 2 out of maximum of 10 
+Optimizing Pseudo QTNs... 
+Top snps have little effect, set seqQTN to NULL! 
+Genomic inflation factor (lambda): 1.494 
+Writing results to local file 
+Significant level: 8.05e-07 
+---------------------Visualization Start-------------------- 
+Phenotype distribution Plotting 
+PCA plot2d 
+SNP_Density Plotting 
+Circular_Manhattan Plotting SLK_HN.FarmCPU 
+Rectangular_Manhattan Plotting SLK_HN.FarmCPU 
+Q_Q Plotting SLK_HN.FarmCPU 
+Results are stored at Working Directory: /home/schnablelab/niranjan27/Genetics-Assignment/Final_term/Plots 
+End: 2025-05-04 21:49:27 CDT 
+Total running time: 7s 
+===================== MVP ACCOMPLISHED ===================== 

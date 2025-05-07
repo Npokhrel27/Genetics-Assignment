@@ -1,0 +1,26 @@
+---
+title: "Mid-term Exam"
+author: "Niranjan Pokhrel"
+date: "2025-03-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+#GWAS analysis 
+install.packages("rMVP")
+library(rMVP)
+
+Genotype<- work/agro932/niranjan27/GWAS_analysis/Data/BGEM_MMC_imputed_181entries_62077markers_perse.hmp.txt
+Phenotype<- work/agro932/niranjan27/GWAS_analysis/Data/Phenotypic_data.csv
+
+
+MVP.Data(fileHMP="work/agro932/niranjan27/GWAS_analysis/Data/BGEM_MMC_imputed_181entries_62077markers_perse.hmp.txt",
+         filePhe="work/agro932/niranjan27/GWAS_analysis/Data/Phenotypic_data.csv",
+         sep.phe=";",
+         fileKin=FALSE,
+         filePC=FALSE,
+         #maxLine=10000,
+         out="Niranjan.mvp.hmp"
+)
+```
+
