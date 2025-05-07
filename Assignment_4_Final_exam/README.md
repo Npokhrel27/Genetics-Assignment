@@ -1,7 +1,7 @@
 
 # Selection scan and Genome-wide association analysis for nitrogen use efficiency related trait in maize.
 
-This repository contains all the files and codes necessary for selection scan and GWAS analysis.
+This repository contains all the files and codes necessary for selection scan (Fst, nucleotide diversity, Tajima's D) and GWAS analysis.
 
 There are three main directories:
 
